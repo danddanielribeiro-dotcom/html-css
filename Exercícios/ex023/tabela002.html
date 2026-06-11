@@ -13,9 +13,20 @@
             border-collapse: collapse;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         td, th {
            border: 1px solid black;
            padding: 10px; 
+        }
+
+        tbody > tr:nth-child(even){
+            background-color: lightgray;
         }
         
         td.num {
@@ -34,6 +45,7 @@
     <h1>uso de tabelas grandes</h1>
     <!--ANATOMIA PARA TABELAS GRANDES
     TABLE
+        caption
         THEAD
             TR,TD,TH
         TBODY
@@ -42,9 +54,10 @@
             TR,TD,TH
     -->
     <table>
+        <caption>Poputação das Unidades da Federação</caption>
         <thead>
-            <th>Estado</th>
-            <th>população</th>
+            <th scope="col">Estado</th>
+            <th scope="col" style="width: 120px;">população</th>
         </thead>
         <tbody>
             <tr>
@@ -157,7 +170,7 @@
             </tr>
         </tbody>
         <tfoot>
-            <th>Total de Habitantes</th>
+            <th scope="row">Total de Habitantes</th>
             <td class="num"><strong>213 421 037</strong></td>
         </tfoot>
     </table>
