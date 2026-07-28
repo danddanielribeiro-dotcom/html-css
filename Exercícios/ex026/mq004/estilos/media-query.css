@@ -1,3 +1,78 @@
 @charset "UTF-8";
 
 /*Todas as demais Midias*/
+
+/*Typical Device Breakpoints
+dispositivos móveis (padrão): até 576px
+celulares grandes/tablets pequenos:576px até 767px
+tablet(retrato):768px até 991px
+desktop/laptop: 992px até 1440px
+desktop grande e TV: acima de 1440px
+*/
+
+
+/*IMPRESSÃO*/
+@media print {
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    main {
+        border: 2px solid black;
+    }
+
+    main, h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: block;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+/*TABLET*/
+@media  screen and (min-width: 768px) and (max-width: 991px){
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: block;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+/*DESKTOP*/
+@media screen and (min-width: 991px) and (max-width: 1440px){
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: block;}
+    img#tv {display: none;}
+}
+
+
+/*GRANDES TELAS*/
+@media screen and (min-width: 1440px){
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    main {
+        whidth: 700px;
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: block;}
+}
